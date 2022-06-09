@@ -1,0 +1,39 @@
+<IfModule mod_rewrite.c>
+	#Basic settings: Turn on/off htaccess || Disabled listing the content of directories || Set the default directory => "/" if it is the root
+		Options -Indexes
+		RewriteEngine on
+		#RewriteBase /
+		
+	#Domain check
+		RewriteCond %{HTTP_HOST} ^infinitiapproved\.hu$ [NC]
+		RewriteRule ^(.*)$ https://infinitikeszlet.hu/approved [R=301,L]
+		
+		RewriteCond %{HTTP_HOST} ^infinitikeszlet\.hu$ [NC]
+		RewriteRule ^(.*)$ https://infinitimagyarorszag.hu/$1 [R=301,L]	
+		
+	
+	#File cache
+		<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+		Header set Cache-Control "max-age=604800, public"
+		</FilesMatch>
+
+	#GZip
+		AddOutputFilterByType DEFLATE text/plain
+		AddOutputFilterByType DEFLATE text/html
+		AddOutputFilterByType DEFLATE text/xml
+		AddOutputFilterByType DEFLATE text/css
+		AddOutputFilterByType DEFLATE application/xml
+		AddOutputFilterByType DEFLATE application/xhtml+xml
+		AddOutputFilterByType DEFLATE application/rss+xml
+		AddOutputFilterByType DEFLATE application/javascript
+		AddOutputFilterByType DEFLATE application/x-javascript		
+		
+	#WWW to non-WWW
+		
+	#HTTP to HTTPS
+		RewriteCond %{HTTPS} off
+		RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+	
+	#Redirect to the "public" directory
+		RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

@@ -1,0 +1,2 @@
+<link rel="stylesheet" href="<?php echo PATH_WEB; ?>vendors/fancybox-3.5.7/dist/jquery.fancybox.min.css">
+<script src="<?php echo PATH_WEB; ?>vendors/fancybox-3.5.7/dist/jquery.fancybox.min.js"></script>
