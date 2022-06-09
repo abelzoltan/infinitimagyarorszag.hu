@@ -46,10 +46,10 @@ switch($routes[0])
 	case "approved":
 		$URL->redirect(["keszleteink"]);
 		break;
-	case "keszleteink":
-	case "q30-keszletakcio":
-		include($routesDir."old-cars.php");
-		break;
+//	case "keszleteink":
+//	case "q30-keszletakcio":
+//		include($routesDir."old-cars.php");
+//		break;
 	#Cookies
 	case "sutik-elfogadasa":
 		include($routesDir."cookies.php");

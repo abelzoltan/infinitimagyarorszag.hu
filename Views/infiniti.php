@@ -251,7 +251,7 @@ else
 												<div class="primaryNav pageNavigation">
 													<ul class="nav-primary itemscope" itemtype="http://schema.org/SiteNavigationElement">
 														<li><a itemprop="url" href="<?php echo PATH_WEB; ?>szerviz" target="_self" title="<?php echo $texts["menuService"]; ?>"><?php echo $texts["menuService"]; ?></a></li>
-														<li><a itemprop="url" href="<?php echo PATH_WEB; ?>keszleteink" target="_self" title="<?php echo $texts["menuStockCar"]; ?>"><?php echo $texts["menuStockCar"]; ?></a></li>
+<!--														<li><a itemprop="url" href="--><?php //echo PATH_WEB; ?><!--keszleteink" target="_self" title="--><?php //echo $texts["menuStockCar"]; ?><!--">--><?php //echo $texts["menuStockCar"]; ?><!--</a></li>-->
 													</ul>
 												</div>
 											</nav>
