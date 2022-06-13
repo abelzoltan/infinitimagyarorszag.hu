@@ -40,7 +40,6 @@ if(isset($formContactType) AND !empty($formContactType) AND (!isset($postData["c
 											<select name="contactTypeName" class="my-infiniti-select" required>
 												<option value="">(Kérjük válasszon!)</option>
 												<option value="Szerviz bejelentkezés" <?php if($postData["contactTypeName"] == "Szerviz bejelentkezés") { ?>selected<?php } ?>>Szerviz bejelentkezés</option>
-												<option value="Szerviz - Infiniti Eien akció" <?php if($postData["contactTypeName"] == "Szerviz - Infiniti Eien akció") { ?>selected<?php } ?>>Infiniti Eien akció</option>
 											</select>
 											<input type="hidden" name="modelName" value="">
 										</div>
